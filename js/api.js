@@ -1,5 +1,5 @@
 const API_Key = "6f4fbbd9819443cfb09d86915cf9c072";
-const API = `https://api.rawg.io/api/games?key=${API_Key}&skip=0`;
+const API = `https://api.rawg.io/api/games?key=${API_Key}&skip=0&page_size=33`;
 
 export async function getGames(){
     try{

@@ -40,16 +40,18 @@
 
     <main>
 
-        <section class="flex m-20 mt-44 gap-5">
-            <div class="flex flex-col items-start justify-end gap-4">
+        <section class="flex m-20 mt-44 gap-">
+            <div class="flex flex-col items-start justify-end gap-4 ml-5">
                 <h1 class="text-8xl head-font leading-21"><span class="text-accent">DISCOVER.</span> <br> PLAY. REPEAT.</h1>
                 <p class="inter-body text-xl text-para mt-3">Discover games you'll love, build your personal
-                collection, and find your next game to play.</p>    
-                <button class="inter-buttons text-lg p-2 px-5 rounded-lg text-accent border-[2px] hover:bg-accent hover:text-thead hover:border-accent ani mt-5">EXPLORE GAMES</button>
-            </div>
-            <div id="container" class="ani skeleton">
-                <div class="overlay"></div>
-            </div>
+                    collection, and find your next game to play.</p>    
+                    <button class="inter-buttons text-lg p-2 px-5 rounded-lg text-accent border-[2px] hover:bg-accent hover:text-thead hover:border-accent ani mt-5">EXPLORE GAMES</button>
+                </div>
+                <button id="prev" class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left preview-icon arrow-svg"><path d="m15 18-6-6 6-6"/></svg></button>
+                <div id="container" class="ani skeleton">
+                    <!-- <div class="overlay"></div> -->
+                </div>
+            <button id="next" class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right preview-icon arrow-svg"><path d="m9 18 6-6-6-6"/></svg></button>
         </section>
 
         <section class="mt-30 mb-10">
@@ -84,7 +86,7 @@
                         <h3 class="head-font text-4xl">
                             FIND WHAT'S NEXT
                         </h3>
-                        <p class="inter-body text-lg text-para ">
+                        <p class="inter-body text-lg text-para">
                             Shelf uses the games in your collection to understand what you enjoy. Discover recommendations based on genres, tags, platforms and your favourite games, helping you find something new when you don't know what to play.
                         </p>
                         <button class="inter-buttons text-lg p-2 px-5 rounded-lg text-accent border-[2px] hover:bg-accent hover:text-thead hover:border-accent ani mt-5 btn-width-3">
