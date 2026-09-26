@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelf — Discover Your Next Game</title>
+    <link rel="shortcut icon" href="./assets/favicon (2).ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./css/style.css">
+     <style type="text/tailwindcss">
+        @theme{
+            --color-accent:  #0D6EFD;
+            --color-para: hsl(0, 0%, 75%);
+            --color-thead: hsl(0,0%,95%);
+        }
+    </style>
+</head>
+<body class="bg-black text-thead">
+
+    <header>
+        <section class="h-18 flex items-center gap-5 justify-between fixed top-0 z-10 bg-black w-full">
+            <img src="./assets/Logo_And_Name.png" alt="" class="h-full ani toTop">
+            <nav>
+                <ul class="flex gap-10 font-medium text-lg text-white inter-nav">
+                    <li class="hover:text-accent ani toTop">Home</li>
+                    <li class="hover:text-accent ani">Discover</li>
+                    <li class="hover:text-accent ani">My Shelf</li>
+                </ul>
+            </nav>
+            <div class="inter-buttons text-lg flex gap-5 mx-8">
+                <button class="p-1 px-4 rounded-lg text-accent border-[2px] hover:bg-accent hover:text-thead hover:border-accent ani">
+                    Login
+                </button>
+                <button class="p-1 px-4 rounded-lg text btn-1 text-thead border-[2px] border-accent bg-accent hover:border-accent ani">
+                    <a href="./pages/signUp.html">Sign Up</a>
+                </button>
+            </div>
+        </section>
+    </header>
+
+    <main>
+
+        <section class="flex m-20 mt-44 gap-5">
+            <div class="flex flex-col items-start justify-end gap-4">
+                <h1 class="text-8xl head-font leading-21"><span class="text-accent">DISCOVER.</span> <br> PLAY. REPEAT.</h1>
+                <p class="inter-body text-xl text-para mt-3">Discover games you'll love, build your personal
+                collection, and find your next game to play.</p>    
+                <button class="inter-buttons text-lg p-2 px-5 rounded-lg text-accent border-[2px] hover:bg-accent hover:text-thead hover:border-accent ani mt-5">EXPLORE GAMES</button>
+            </div>
+            <div id="container" class="ani skeleton">
+                <div class="overlay"></div>
+            </div>
+        </section>
+
+        <section class="mt-30 mb-10">
+            <div class="flex flex-col items-center gap-5">
+                <h2 class="head-font text-6xl">HOW <span class="text-accent">SHELF</span> WORKS</h2>
+                <p class="inter-body text-xl text-para max-w-280 text-center">Shelf brings game discovery and personal tracking together in one place. Explore new games, organise your collection, and get recommendations based on what you enjoy playing.</p>
+                <div class="flex gap-5 mx-5 mt-12">
+                    <div class="card ani">
+                        <h3 class="head-font text-4xl">
+                            DISCOVER
+                        </h3>
+                        <p class="inter-body text-lg text-para ">
+                            Explore a huge collection of games and discover something new to play. Search by title, genre or platform, browse popular releases, and explore detailed information about games that catch your attention.
+                        </p>
+                        <button class="inter-buttons text-lg p-2 px-5 rounded-lg text-accent border-[2px] hover:bg-accent hover:text-thead hover:border-accent ani mt-5 btn-width-1">
+                            EXPLORE GAMES 
+                        </button>
+                    </div>
+                    <div class="card ani">
+                        
+                        <h3 class="head-font text-4xl">
+                            ORGANISE
+                        </h3>
+                        <p class="inter-body text-lg text-para ">
+                            Keep all your games in one place and organise them based on your gaming progress. Add games to your collection and move them between <span class="inter-buttons text-thead">To Play, Playing, and Played</span> whenever your status changes.
+                        </p>
+                        <button class="inter-buttons text-lg p-2 px-5 rounded-lg text-accent border-[2px] hover:bg-accent hover:text-thead hover:border-accent ani mt-5 btn-width-2">
+                            MY GAMES
+                        </button>
+                    </div>
+                    <div class="card ani">
+                        <h3 class="head-font text-4xl">
+                            FIND WHAT'S NEXT
+                        </h3>
+                        <p class="inter-body text-lg text-para ">
+                            Shelf uses the games in your collection to understand what you enjoy. Discover recommendations based on genres, tags, platforms and your favourite games, helping you find something new when you don't know what to play.
+                        </p>
+                        <button class="inter-buttons text-lg p-2 px-5 rounded-lg text-accent border-[2px] hover:bg-accent hover:text-thead hover:border-accent ani mt-5 btn-width-3">
+                            GET RECOMMENDATIONS
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

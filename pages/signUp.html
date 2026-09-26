@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account</title>
+    <link rel="shortcut icon" href="../assets/favicon (2).ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../css/style.css">
+     <style type="text/tailwindcss">
+        @theme{
+            --color-accent:  #0D6EFD;
+            --color-para: hsl(0, 0%, 75%);
+            --color-thead: hsl(0,0%,95%);
+            --color-grey: hsl(0,0%,10%);
+        }
+        </style>
+</head>
+<body>
+    <section class="flex h-screen w-screen text-thead">
+        <div class="h-full w-[150%] bg-black">
+            <div class="h-17 mt-2">
+               <a href="../index.html" class="h-full"> <img src="../assets/Logo_And_Name.png" alt="" class="h-full mx-15 ani"></a>
+            </div>
+            <div class="mx-23 flex flex-col justify-center mt-35">
+                <h3 class="head-font text-7xl leading-19">
+                    DISCOVER NEW GAMES. <br>
+                    BUILD YOUR <span class="text-accent">SHELF</span>. <br>
+                    PLAY WHAT YOU LOVE.
+                </h3>
+                <p class="inter-body text-para text-xl mt-10">
+                    Discover new games and explore what interests you, <br>
+                    build and organise your personal shelf, <br>
+                    and find your next game to play.
+                </p>
+            </div>
+        </div>
+        <div class="h-full w-full bg-grey flex flex-col">
+            <section class="mx-27 my-20">
+                <div class="flex flex-col items-center">
+                    <h4 class="inter-buttons text-2xl">
+                        Sign Up Account
+                    </h4>
+                    <p class="text-para inter-body text-lg">Enter your personal data to create your account</p>
+                </div>
+                <div class="mt-25 inter-body text-lg">
+                    <form action="" class="flex flex-col gap-3 relative">
+                        <div class="form-style">
+                            <input type="text" name="Name" id="Name" class="border border-l-0 border-r-0 border-t-0  focus:outline-none  px-2" placeholder=" ">
+                            <label for="Name">Name</label>
+                        </div>
+
+                        <div class="form-style">
+                            <input type="email" name="email" id="Email" class="border border-l-0 border-r-0 border-t-0  focus:outline-none  px-2" placeholder=" ">
+                            <label for="Email">Email</label>
+                        </div>
+
+                        <div class="form-style">
+                            <input type="password" name="password" id="Password" class="border border-l-0 border-r-0 border-t-0  focus:outline-none  px-2" placeholder=" ">
+                            <label for="Password">Password</label>
+                        </div>
+
+                        <button type="submit" class="p-1 px-4 rounded-lg text btn-1 text-thead border-[2px] border-accent bg-accent hover:border-accent ani inter-buttons">Sign Up</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </section>
+</body>
+</html>
