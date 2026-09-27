@@ -3,6 +3,11 @@ import { getGames } from "./api.js";
 const games = await getGames();
 
 console.log(games);
+
+// ----------------------------------------------------------------------------------------------------------------
+// to top
+// ----------------------------------------------------------------------------------------------------------------
+
 const toTop = document.querySelectorAll(".toTop");
 toTop.forEach((data)=>{
     data.addEventListener("click",()=>{
@@ -14,26 +19,18 @@ toTop.forEach((data)=>{
     })
 })
 
-// const info = games[0];
-
-    // const slideImg = document.createElement("img");
-    // slideImg.src = info.background_image;
-    // slideImg.classList.add("slide-img")
-    // const slideTitle = document.createElement("h3");
-    // slideTitle.innerHTML = info.name;
-    // slideTitle.classList.add("slide-title")
-    // const slideContainer = document.getElementById("container")
-    // slideContainer.appendChild(slideImg)
-    // slideContainer.appendChild(slideTitle);
+// ----------------------------------------------------------------------------------------------------------------
+// image slider
+// ----------------------------------------------------------------------------------------------------------------
 
 const arr = [games[0],games[1],games[2],games[5],games[7],games[10],games[11],games[12],games[23],games[20],games[32]]
 console.log(arr);
 
 let currentIndex = 0;
+const slideContainer = document.getElementById("container")
 
 const showSlide = (index)=>{
 
-    const slideContainer = document.getElementById("container")
     slideContainer.innerHTML = "";  
 
     const game = arr[index];
@@ -82,11 +79,51 @@ prev.addEventListener("click",()=>{
     showSlide(currentIndex)
 })
 
-setInterval(()=>{
-    if(currentIndex < arr.length - 1){
-        currentIndex++;
-    }else{
-        currentIndex = 0;
-    }
-    showSlide(currentIndex);
-},5000)
+let interval;
+
+const startSlider = ()=>{
+    clearInterval(interval);
+    interval = setInterval(()=>{
+        if(currentIndex < arr.length -1){
+            currentIndex ++;
+        }
+        else{
+            currentIndex = 0
+        }
+        showSlide(currentIndex)
+    },5000)
+}
+
+const stopSlider = ()=>{
+    clearInterval(interval);
+}
+
+slideContainer.addEventListener("mouseenter",stopSlider);
+slideContainer.addEventListener("mouseleave",startSlider);
+
+next.addEventListener("mouseenter",stopSlider)
+next.addEventListener("mouseleave",startSlider)
+
+prev.addEventListener("mouseenter",stopSlider)
+prev.addEventListener("mouseleave",startSlider)
+
+startSlider();
+
+// ----------------------------------------------------------------------------------------------------------------
+//  login modal
+// ----------------------------------------------------------------------------------------------------------------
+
+const openModal = document.getElementById("open-login");
+const closeModal = document.getElementById("close-login");
+const modalOverlay = document.getElementById("modal-overlay");
+const loginModal = document.getElementById("login-popup");
+
+openModal.addEventListener("click",()=>{
+    loginModal.classList.add("active");
+    modalOverlay.classList.add("active");
+})
+
+closeModal.addEventListener("click",()=>{
+    loginModal.classList.remove("active");
+    modalOverlay.classList.remove("active");
+})

@@ -12,6 +12,7 @@
             --color-accent:  #0D6EFD;
             --color-para: hsl(0, 0%, 75%);
             --color-thead: hsl(0,0%,95%);
+            --color-grey: hsl(0,0%,10%);
         }
     </style>
 </head>
@@ -28,7 +29,7 @@
                 </ul>
             </nav>
             <div class="inter-buttons text-lg flex gap-5 mx-8">
-                <button class="p-1 px-4 rounded-lg text-accent border-[2px] hover:bg-accent hover:text-thead hover:border-accent ani">
+                <button class="p-1 px-4 rounded-lg text-accent border-[2px] hover:bg-accent hover:text-thead hover:border-accent ani" id="open-login">
                     Login
                 </button>
                 <button class="p-1 px-4 rounded-lg text btn-1 text-thead border-[2px] border-accent bg-accent hover:border-accent ani">
@@ -39,6 +40,10 @@
     </header>
 
     <main>
+
+        <!-- ----------------------------------------------------------------------------------------------------------------
+        hero section
+        ---------------------------------------------------------------------------------------------------------------- -->
 
         <section class="flex m-20 mt-44 gap-">
             <div class="flex flex-col items-start justify-end gap-4 ml-5">
@@ -53,6 +58,10 @@
                 </div>
             <button id="next" class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right preview-icon arrow-svg"><path d="m9 18 6-6-6-6"/></svg></button>
         </section>
+
+        <!-- ----------------------------------------------------------------------------------------------------------------
+        working
+        ---------------------------------------------------------------------------------------------------------------- -->
 
         <section class="mt-30 mb-10">
             <div class="flex flex-col items-center gap-5">
@@ -96,7 +105,38 @@
                 </div>
             </div>
         </section>
+
+        <div class="login-modal" id="login-popup">
+            <div class="bg-black w-full h-full glow rounded-s-md flex flex-col justify-center items-center">
+                <img src="./assets/login_title.png" alt="" class="h-70">
+                <img src="./assets/login_logo_title.png" alt="" class="w-100">
+            </div>
+            <div class="bg-grey w-full h-full glow rounded-e-md relative">
+                <button id="close-login" class="font-bold text-3xl absolute top-0 right-4">&times</button>
+                <div class="flex flex-col my-20 items-center gap-1">
+                    <h3 class="inter-buttons text-3xl">login</h3>
+                    <form action="" class="flex flex-col gap-1 relative text-2xl mt-10">
+                        <div class="form-style">
+                            <input type="email" name="email" id="Email" class="border border-l-0 border-r-0 border-t-0  focus:outline-none  px-2" placeholder=" ">
+                            <label for="Email">Email</label>
+                        </div>
+                        <div class="form-style">
+                            <input type="password" name="password" id="Password" class="border border-l-0 border-r-0 border-t-0  focus:outline-none  px-2" placeholder=" ">
+                            <label for="Password">Password</label>
+                        </div>
+                        <button type="submit" class="p-1 px-4 rounded-lg text btn-1 text-thead border-[2px] border-accent bg-accent hover:border-accent ani inter-buttons">Login</button>
+                    </form>
+                        <p class="text-para text-body mt-4">Don't have an account?<span class="text-thead inter-nav"><a href="./pages/signUp.html"> Sign Up</a></span></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-overlay"></div>
     </main>
+
+    <footer>
+        
+    </footer>
 
     <script type="module" src="./js/main.js"></script>
 </body>
